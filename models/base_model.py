@@ -5,7 +5,7 @@ defines all common attributes/methods for other classes
 
 from uuid import uuid4
 from datetime import datetime
-
+import models
 
 class BaseModel():
     """A base model class for AirBnB objects."""
@@ -24,6 +24,7 @@ class BaseModel():
             self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+            models.storage.new(self)
 
     def __str__(self):
         """Return a string representation of the BaseModel instance."""
@@ -33,6 +34,7 @@ class BaseModel():
     def save(self):
         """Update the updated_at attribute with the current datetime."""
         self.updated_at = datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """Return a dictionary representation of the BaseModel instance."""
