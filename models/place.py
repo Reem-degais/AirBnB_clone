@@ -3,6 +3,7 @@
 
 from models.base_model import BaseModel
 
+
 class Place(BaseModel):
     """represent a place.
        attributes:
@@ -18,6 +19,8 @@ class Place(BaseModel):
         longitude : The longitude of the place.
         amenity_ids : A list of Amenity ids.
     """
+
+
 city_id = ""
 user_id = ""
 name = ""
