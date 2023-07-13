@@ -1,7 +1,8 @@
-#!/usr/bin/python 
+#!/usr/bin/python
 """defines Review class"""
 
 from models.base_model import BaseModel
+
 
 class Review(BaseModel):
     """represent a review.
