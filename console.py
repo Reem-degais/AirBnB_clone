@@ -27,6 +27,7 @@ from models.city import City
 from models.amenity import Amenity
 from models.review import Review
 
+
 class HBNBCommand(cmd.Cmd):
     """Command interpreter for the HBNB program."""
     prompt = "(hbnb) "
