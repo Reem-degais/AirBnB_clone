@@ -7,6 +7,7 @@ from uuid import uuid4
 from datetime import datetime
 import models
 
+
 class BaseModel():
     """A base model class for AirBnB objects."""
 
