@@ -14,7 +14,7 @@ class TestUser(unittest.TestCase):
     def test_no_args_instantiates(self):
         self.assertEqual(User, type(User()))
 
-     def test_id_is_str(self):
+    def test_id_is_str(self):
         self.assertEqual(str, type(User().id))
 
     def test_created_at_is_datetime(self):
