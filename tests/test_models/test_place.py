@@ -88,5 +88,6 @@ class TestPlace(unittest.TestCase):
         self.assertIn("amenity_ids", dir(pl))
         self.assertNotIn("amenity_ids", pl.__dict__)
 
+
 if __name__ == "__main__":
     unittest.main()
