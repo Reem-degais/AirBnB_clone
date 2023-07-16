@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """Defines unittests for user class"""
 
 import models
@@ -34,6 +33,7 @@ class TestUser(unittest.TestCase):
 
     def test_last_name_is_str(self):
         self.assertEqual(str, type(User.last_name))
+
 
 if __name__ == "__main__":
     unittest.main()
