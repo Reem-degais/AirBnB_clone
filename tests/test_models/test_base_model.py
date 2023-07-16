@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Defines unittests for basemodel class"""
+
 import models
 import unittest
 from models.base_model import BaseModel
