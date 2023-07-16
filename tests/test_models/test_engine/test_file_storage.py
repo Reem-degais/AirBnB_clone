@@ -36,5 +36,6 @@ class TestFileStorage(unittest.TestCase):
         with self.assertRaises(TypeError):
             models.storage.new(BaseModel(), 1)
 
+
 if __name__ == "__main__":
     unittest.main()
