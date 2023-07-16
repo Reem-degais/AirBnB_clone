@@ -27,5 +27,7 @@ class TestState(unittest.TestCase):
         self.assertEqual(str, type(State.name))
         self.assertIn("name", dir(st))
         self.assertNotIn("name", st.__dict__)
+
+
 if __name__ == "__main__":
     unittest.main()
