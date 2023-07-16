@@ -28,5 +28,6 @@ class TestAmenity(unittest.TestCase):
         self.assertIn("name", dir(Amenity()))
         self.assertNotIn("name", am.__dict__)
 
+
 if __name__ == "__main__":
     unittest.main()
