@@ -34,5 +34,6 @@ class TestCity(unittest.TestCase):
         self.assertIn("name", dir(cy))
         self.assertNotIn("name", cy.__dict__)
 
+
 if __name__ == "__main__":
     unittest.main()
