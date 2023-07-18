@@ -19,6 +19,7 @@ Usage:
 
 import cmd
 from models.base_model import BaseModel
+import shlex
 from models import storage
 from models.user import User
 from models.place import Place
@@ -162,6 +163,21 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** no instance found **")
 
+    def default(self, arg):
+        """to handel using: <class name>.fun()"""
+        args = arg.split('.', 1)
+        if args[0] in HBNBCommand.__classes:
+            if args[1].strip('()') == 'count':
+                self.do_count(args[0])
+
+    
+    def do_count(self, arg):
+        """to retrieve the number of instances of a class"""
+        count = 0
+        for obj in storage.all().values():
+            if arg == obj.__class__.__name__:
+                count += 1
+        print(count)
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
