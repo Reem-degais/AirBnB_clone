@@ -169,6 +169,8 @@ class HBNBCommand(cmd.Cmd):
         if args[0] in HBNBCommand.__classes:
             if args[1].strip('()') == 'count':
                 self.do_count(args[0])
+            elif args[1].strip('()') == 'all':
+                self.do_all(args[0])
 
     
     def do_count(self, arg):
