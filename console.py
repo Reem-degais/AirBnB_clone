@@ -172,7 +172,7 @@ class HBNBCommand(cmd.Cmd):
             elif args[1].strip('()') == 'all':
                 self.do_all(args[0])
             elif args[1].split('(')[0] == 'show':
-                self.do_show(args[0])
+                self.do_show(args[0])+' '+args[1].split('(')[1].strip(')'))
             elif args[1].split('(')[0] == 'destroy':
                 self.do_destroy(args[0])
 
